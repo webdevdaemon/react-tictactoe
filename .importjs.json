@@ -1,0 +1,7 @@
+{
+	"lookupPaths": [
+    "tictactoe/src/Components/",
+    "tictactoe/src/Components/**/*.js",
+		"tictactoe/src/*.js"
+  ]
+}

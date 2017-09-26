@@ -1,0 +1,25 @@
+{
+  "name": "simonjs",
+  "description": "simon game",
+  "main": "index.js",
+  "authors": [
+    "webDevDaemon - (Charles M.) <webdevdaemon@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "simon",
+    "react",
+    "redux",
+    "interactive",
+    "game"
+  ],
+  "homepage": "https://github.com/webdevdaemon/react-simon-game",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

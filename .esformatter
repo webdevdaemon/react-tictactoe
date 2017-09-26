@@ -1,0 +1,62 @@
+{
+	"plugins": [
+		"esformatter-jsx",
+		"esformatter-collapse-objects",
+		"esformatter-curly",
+		"esformatter-quotes",
+		"esformatter-braces",
+		"es-strip-semicolons"
+	],
+	"jsx": {
+		// whether to recursively format jsx expressions with esformatter
+		// set this to false if you don't want JSXExpressions to be formatted recursively, like when using problematic plugins
+		"formatJSXExpressions": false,
+		// By default ObjectExpression and ArrayExpression in JSXExpressions are inlined,
+		// if false, the Expression might expand several lines
+		"JSXExpressionsSingleLine": false,
+		// by default is true if set to false it works the same as esformatter-jsx-ignore
+		"formatJSX": true,
+		// keep the node attributes on the same line as the open tag. Default is true.
+		// Setting this to false will put each one of the attributes on a single line
+		"attrsOnSameLineAsTag": true,
+		// how many attributes should the node have before having to put each
+		// attribute in a new line. Default 1
+		"maxAttrsOnTag": 3,
+		// if the attributes are going to be put each one on its own line, then keep the first
+		// on the same line as the open tag
+		"firstAttributeOnSameLine": true,
+		// default to one space. Make it empty if you don't like spaces between JSXExpressionContainers
+		"spaceInJSXExpressionContainers": "",
+		// align the attributes with the first attribute (if the first attribute was kept on the same line as on the open tag)
+		"alignWithFirstAttribute": false,
+		"closingTagOnNewLine": true, // default false. if true attributes on multiple lines will close the tag on a new line
+		"JSXAttributeQuotes": "single",
+		"htmlOptions": {
+			"brace_style": "collapse, preserve-inline",
+			"indent_char": " ",
+			"indent_size": 2,
+			"preserve_newlines": true,
+			"max_preserve_newlines": 1,
+			"space_in_paren": false,
+			"comma_first": false
+		}
+	},
+	"collapseObjects": {
+		"ObjectExpression": {
+			"maxLineLength": 120,
+			"maxKeys": 4,
+			"maxDepth": 3,
+			"forbidden": [
+				"FunctionExpression"
+			]
+		},
+		"ArrayExpression": {
+			"maxLineLength": 120,
+			"maxKeys": 3,
+			"maxDepth": 2,
+			"forbidden": [
+				"FunctionExpression"
+			]
+		}
+	}
+}

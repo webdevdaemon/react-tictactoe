@@ -1,0 +1,14 @@
+function
+
+
+		if 3 <= array.length < 5
+			sort array lowest -> highest
+			check against legend
+			if winner -> alert winner
+				highlight winning moves
+			else -> return
+
+		if array.length >= 5
+		check against legend
+		  if winner -> alert winner
+				highlight winning moves
