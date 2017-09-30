@@ -19,21 +19,24 @@
 // 	['6', '7', '8'],
 // ]
 
-export const _gameEval = ({player_tally, actor}) => {
-  let moves = player_tally[actor].length > 1
-      ? player_tally[actor].sort()
-      : player_tally[actor],
-	int = moves.reduce((acc, curr, dex, ray) => {
-    if (dex < 1) {return []}
-    return acc.concat(curr - ray[dex - 1])
-  }, [])
-	console.log('_gameEval.js:29 ::', int)
-	return int
+export const _gameEval = ({ player_tally, actor }) => {
+    let moves = player_tally[actor].length > 1
+        ? player_tally[actor].sort()
+        : player_tally[actor],
+        is_winner = moves.reduce((acc, curr, dex, ray) => {
+            if (dex < 1) { return acc }
+            return acc.concat(curr - ray[dex - 1])
+        }, [] ).filter( ( curr, dex, ray ) => {
+            return ray[0] === curr 
+        })
+
+    console.log('_gameEval.js:29 ::', is_winner)
+    return {is_winner, moves}
 }
 
 /*	console.log(moves)
 legend.forEach(key => {
-if (_.intersection(key, moves).length === 3) {
+if (_.is_winnerersection(key, moves).length === 3) {
 winner = key
 }
 return
